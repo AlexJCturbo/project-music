@@ -52,7 +52,7 @@ We decided to use ([MATERIAL UI](https://mui.com/)/[SEMANTIC UI](https://semanti
 
 - [Alex JCturbo](https://github.com/AlexJCturbo)
 
-- [Rankin](https://github.com/Rankin47)
+- [Sam Rankin](https://github.com/Rankin47)
 
 - [A-N26](https://github.com/A-N26)
 
