@@ -50,6 +50,16 @@ We decided to use ([MATERIAL UI](https://mui.com/)/[SEMANTIC UI](https://semanti
 
 ## Contributors
 
+- [Alex JCturbo](https://github.com/AlexJCturbo)
+
+- [Rankin](https://github.com/Rankin47)
+
+- [A-N26](https://github.com/A-N26)
+
+- []
+
+- []
+
 ## Badges
 
 ![badmath](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
