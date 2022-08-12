@@ -32,7 +32,7 @@ This one is a project. Unlike Challenges it's a colab team work/effort on this o
 
 ## Code Description
 
-We decided to use ([MATERIAL UI](https://mui.com/)/[SEMANTIC UI](https://semantic-ui.com/)/[Threejs](https://threejs.org/)/--) for framework "other than Bootstrap". And the APIs are ([Spotify API](https://developer.spotify.com/)/[Genius API](https://docs.genius.com/)/[MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_API)/[Songstats](https://rapidapi.com/songstats-app-songstats-app-default/api/songstats/)/--)
+We decided to use (for css - [SEMANTIC UI](https://semantic-ui.com/) and for JS - [Threejs](https://threejs.org/)) for framework "other than Bootstrap". And the APIs are ([Spotify API](https://developer.spotify.com/)/[Genius API](https://docs.genius.com/)/[MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_API)/[Songstats](https://rapidapi.com/songstats-app-songstats-app-default/api/songstats/)/--)
 
 - HTML→
 
