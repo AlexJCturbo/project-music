@@ -7,27 +7,61 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Include Semantic UI-->
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script 
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
 </head>
-<body>
-    <center>
-    <h1>Music to Your Ears</h1>
-    <div id="inputContainer1">Genre: <input type="text" id="Input1"></div>
-    <div id="inputContainer2">Genre: <input type="text" id="Input2"></div>
-    <button>click~</button>
+<center>
+  <h1 class="ui header ">Music to Your Ears</h1>
+  <img>
+  <img class="ui fluid image" src="https://i.pinimg.com/originals/53/04/7c/53047cb255f7e9c8146dcca97c27d942.jpg">
+    <div class="ui fluid two column stackable grid">
+      <div class="column">
+        <div class="ui raised segment">
+          <div class="ui fluid placeholder">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
+            <!-- link style icon to recieve pointer-events -->
+            <i class="ui inverted circular search link icon"></i>
+            <div class="image header">
+              <div class="ui centered medium image">
+                <img id="genreImage" src="https://musicmachinery.files.wordpress.com/2013/09/localhost_8000_index-html-2.png"></div>
+              </div>
+              <div class="paragraph"></div>
+            </div>
+          </div>
+        </div>
+      <div class="column">
+        <div class="ui raised segment">
+          <div class="ui fluid placeholder">Song: <input type="text" placeholder="Enter a song title!" id="Input2"></div>
+          <div class="image header">
+            <div class="ui middle aligned small image">
+              <img id="SongImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
+              <div class="paragraph"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="ui vertical animated green button" tabindex="0">
+        <div class="hidden content">Search</div>
+        <div class="visible content">
+          <i class="music icon"></i>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <hr>
+      <br>
+      <hr>
+    <div class="input" id="inputContainer1">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
+    </div>
+    <div class="input" id="inputContainer2">Song: <input type="text" placeholder="Enter a song title!" id="Input2">
+    </div>
+    <br>
+    <button class="button">Search</button>
     <h2 id="Name">Music</h2>
-    </center>
-
-    <script src="./assets/js/script.js"></script>
-    
-
-
+</center>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<!-- semantic js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
