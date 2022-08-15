@@ -6,7 +6,7 @@
 
 2. [Links](#Links)
 
-3. [Code Descriptions](#Code%20Descriptions)
+3. [Code Description](#Code%20Description)
 
 4. [Challenges](#Challenges)
 
@@ -30,9 +30,9 @@ This one is a project. Unlike Challenges it's a colab team work/effort on this o
 
 - [GitHub repo Link](https://github.com/)
 
-## Code Descriptions
+## Code Description
 
-We decided to use ([MATERIAL UI](https://mui.com/)/[SEMANTIC UI](https://semantic-ui.com/)/[Threejs](https://threejs.org/)/--) for framework "other than Bootstrap". And the APIs are ([Spotify API](https://developer.spotify.com/)/[Genius API](https://docs.genius.com/)/[MusicBrainz](https://musicbrainz.org/doc/MusicBrainz_API)/[Songstats](https://rapidapi.com/songstats-app-songstats-app-default/api/songstats/)/--)
+We decided to use (for css - [SEMANTIC UI](https://semantic-ui.com/) and for JS - [Threejs](https://threejs.org/)) for framework "other than Bootstrap". And the APIs are ([Spotify API](https://developer.spotify.com/)/[Songstats](https://rapidapi.com/songstats-app-songstats-app-default/api/songstats/))
 
 - HTML→
 
@@ -50,13 +50,13 @@ We decided to use ([MATERIAL UI](https://mui.com/)/[SEMANTIC UI](https://semanti
 
 ## Contributors
 
-- [Alex JCturbo](https://github.com/AlexJCturbo)
+- [Alex Jaimes](https://github.com/AlexJCturbo)
 
 - [Sam Rankin](https://github.com/Rankin47)
 
 - [A-N26](https://github.com/A-N26)
 
-- []
+- [Damon Paoletti](https://github.com/damonpaoletti)
 
 - []
 
