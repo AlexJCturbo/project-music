@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC TO YOUR EARS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"> 
+    <!-- Include Semantic UI-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+   
+</head>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="navbar">
+            <img src="images/logo_200x200.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HOW IT WORKS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">How the site works</button>
+
+<div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Combine your favourite genre with song lyrics and get a song rec!</p>
+  </div>
+
+</div>
+
+        <div class="content">
+            <div class="left">
+                <h1>MUSIC <br> TO YOUR <br> EARS</h1>
+            </div>
+            <div class="right">
+                <p>🎵</p>
+                <img src="images/play.png" id="icon">
+            </div>
+        </div>
+    </div>
+    <div class="input" id="inputContainer1">Genre:<input type="text" placeholder="Enter Genre" id="Input1">
+    </div>
+    <div class="input" id="inputContainer2">Song: <input type="text" placeholder="Enter Lyrics" id="Input2">
+    </div>
+    <br>
+    <button class="button">Lets Go</button>
+    <h2 id="Name">Result</h2>
+    <footer>
+        <h2> 🎵 Made with love by Music to your Ears 🎵</h2>
+         <div>
+         <a href="#">Read our private policy</a><br/>
+                  &copy; 2022 MTYE,Inc. </div>
+            </footer>
+        </center>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- semantic js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+        </body>
+        </html>
+    <audio id="mysong">
+        <source src="images/700Mg.mp4" type="audio/mp4">
+    </audio>
+    
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "images/pause.png";
+            }else{
+                mysong.pause();
+                icon.src = "images/play.png";
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
