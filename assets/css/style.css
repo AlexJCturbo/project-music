@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       body{
       background-color:rgb(248, 225, 121);
@@ -7,3 +8,14 @@
         color: rgb(15, 145, 145);
         font-family: '', Times, serif;
          }
+=======
+
+      body{
+      background-color:rgb(248, 225, 121);
+      margin-top: 15px;
+      }
+      .uiheader{
+        color: rgb(15, 145, 145);
+        font-family: '', Times, serif;
+         }
+>>>>>>> e20106b24a551c1840d7fab3da117d48981cc5cc
