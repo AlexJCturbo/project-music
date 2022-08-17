@@ -1,73 +1,135 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music to your Ears</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <title>MUSIC TO YOUR EARS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <!-- Include Semantic UI-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-   
+
+    <!-- tab icon -->
+    <link rel="icon" type="image/ico" sizes="48x48" href="images/icons/favicon.ico"/>
+
+    <link rel="manifest" href="images/icons/site.webmanifest">
+
 </head>
-<center>
-  <h1 class="uiheader">🎵 Music to Your Ears 🎵</h1>
-  <img>
-  <img class="ui fluid image" src="https://i.pinimg.com/originals/53/04/7c/53047cb255f7e9c8146dcca97c27d942.jpg">
+
+<div class="ui left">
+  <h1>MUSIC TO YOUR EARS</h1>
+</div>
+
+<div class="ui fluid content">
+
+  <div class="ui">
+      <p>🎵</p>
+      <img src="images/play.png" id="icon">
+  </div>
+</div>
+
+<div class="fullimage" >
+
+  <div class="hero">
+      <div class="ui fluid navbar">
+          <img src="images/logo_200x200.png" class="logo">
+          <ul class="ui top">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li>
+                <a href="#"><button class="mini ui primary button" id="myBtn">HOW IT WORKS</button>
+                <!-- Trigger/Open The Modal -->
+                <div id="myModal" class="modal">
+
+
+                  <div class="ui modal-content">
+                    <span class="close">&times;</span>
+                    <p>Combine your favourite genre with song lyrics and get a song rec!</p>
+                  </div>
+                </a>
+              </li>
+              <li><a href="#">CONTACT</a></li>
+          </ul>
+      </div>
+
+    </div>
     <div class="ui fluid two column stackable grid">
-      <div class="column">
-        <div class="ui raised segment">
-          <div class="ui fluid placeholder">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
-            <!-- link style icon to recieve pointer-events -->
-            <i class="ui inverted circular search link icon"></i>
-            <div class="image header">
-              <div class="ui centered medium image">
-                <img id="genreImage" src="https://musicmachinery.files.wordpress.com/2013/09/localhost_8000_index-html-2.png"></div>
+        <div class="column">
+          <div class="ui raised segment">
+            <div class="ui fluid placeholder">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
+              <!-- link style icon to recieve pointer-events -->
+              <i class="ui inverted circular search link icon"></i>
+              <div class="image header">
+                <div class="ui centered medium image">
+                  <img id="genreImage" src="javascript"></div>
+                </div>
+                <div class="paragraph"></div>
               </div>
-              <div class="paragraph"></div>
+            </div>
+          </div>
+        <div class="column">
+          <div class="ui raised segment">
+            <div class="ui fluid placeholder">Lyrics:<input type="text" placeholder="Enter a song title!" id="Input2"></div>
+            <div class="image header">
+              <div class="ui fluid placeholder"><textarea id="lyrics" placeholder></textarea>
+            </div>
+                <div class="paragraph"></div>
+              </div>
             </div>
           </div>
         </div>
-      <div class="column">
-        <div class="ui raised segment">
-          <div class="ui fluid placeholder">Song: <input type="text" placeholder="Enter a song title!" id="Input2"></div>
-          <div class="image header">
-            <div class="ui middle aligned small image">
-              <img id="SongImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
-              <div class="paragraph"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="ui vertical animated green button" tabindex="0">
-        <div class="hidden content">Search</div>
-        <div class="visible content">
-          <i class="music icon"></i>
-        </div>
-      </div>
-      <hr>
-      <br>
-      <hr>
-      <br>
-      <hr>
-    <div class="input" id="inputContainer1">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
+      <button class="button">Lets Go</button>
     </div>
-    <div class="input" id="inputContainer2">Song: <input type="text" placeholder="Enter a song title!" id="Input2">
-    </div>
-    <br>
-    <button class="button">Search</button>
-    <h2 id="Name">Music</h2>
+  </inputs>
+</div>
     <footer>
-<h2> ❤️ Made with love by Music to your Ears</h2>
- <div>
- <a href="#">Read our private policy</a><br/>
-          &copy; 2022 MTYE,Inc. </div>
-    </footer>
-</center>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<!-- semantic js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-<script src="./assets/js/script.js"></script>
+        <h2> 🎵 Made with love by Music to your Ears 🎵</h2>
+         <div>
+         <a href="#">Read our private policy</a><br/>
+                  &copy; 2022 MTYE,Inc. </div>
+            </footer>
+        </center>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- semantic js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+        </body>
+        </html>
+    <audio id="mysong">
+        <source src="images/700Mg.mp4" type="audio/mp4">
+    </audio>
+
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "images/pause.png";
+            }else{
+                mysong.pause();
+                icon.src = "images/play.png";
+            }
+        }
+
+var modal = document.createElement('div');
+modal.style.position = 'fixed';
+modal.style.top = '0';
+modal.style.left = '0';
+modal.style.width = '100%';
+modal.style.height = '100%';
+modal.style.backgroundColor = 'rgba(0,0,0,0.5)';
+modal.style.zIndex = '100';
+modal.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: grey; padding: 20px;"><h1>How the site works</h1><p>Combine your favourite genre with a lyric of your choice and we will recommend a song!</p></div>';
+document.body.appendChild(modal);
+modal.addEventListener('click', function() {
+  document.body.removeChild(modal);
+});
+
+    </script>
+
 </body>
 </html>
