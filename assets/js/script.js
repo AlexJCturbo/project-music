@@ -5,7 +5,7 @@ Users will require to log in with their credentials.
 
 //Declaring main variables
 let clientID = '759e335a3c004201b865fb3dc4e468f7';
-let clientSecret = '275b177fc27443a4abab912ee1717b5c';
+let clientSecret = '';
 
 let userGenreInput = document.getElementById("Input1");
 let searchGenre = document.getElementById("searchGenreBtn");
