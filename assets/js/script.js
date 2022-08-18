@@ -18,7 +18,6 @@ let urlSpotifySearch = 'https://api.spotify.com/v1/search?q';
 //For Artist (https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist)
 let urlArtist = 'https://api.spotify.com/v1/artists/';
 
-
 searchGenre.addEventListener("click", function (event) {
 	event.preventDefault;
     

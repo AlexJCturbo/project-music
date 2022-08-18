@@ -69,3 +69,4 @@ We decided to use (for css - [SEMANTIC UI](https://semantic-ui.com/) and for JS 
 ![badmath](https://img.shields.io/badge/JS-JavaScript-yellow)
 
 ## Credits
+
