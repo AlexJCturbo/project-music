@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music to your Ears</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Include Semantic UI-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
@@ -21,39 +22,54 @@
   <img>
   <img class="ui fluid image" src="https://i.pinimg.com/originals/53/04/7c/53047cb255f7e9c8146dcca97c27d942.jpg">
     <div class="ui fluid two column stackable grid">
+
       <div class="column">
+        <div class = "container">
+
         <div class="ui raised segment">
-          <div class="ui fluid placeholder">Genre:<input type="text" placeholder="Enter type of music you like." id="Input1">
-            <!-- link style icon to recieve pointer-events -->
-            <i class="ui inverted circular search link icon" id="searchGenreBtn"></i>
+          <div class="ui fluid placeholder">Genre:  <input type="text" placeholder="Enter type of music you like." id="Input1">
+            <!-- <i class="ui inverted circular search link icon" id="searchGenreBtn"></i> -->
             <div class="image header">
               <div class="ui centered medium image">
                 <img id="genreImage" src="https://musicmachinery.files.wordpress.com/2013/09/localhost_8000_index-html-2.png"></div>
-              </div>
-              <div class="paragraph"></div>
             </div>
+              <div class="paragraph"></div>
           </div>
         </div>
-      <div class="column">
-        <div class="ui raised segment">
-          <div class="ui fluid placeholder">Song: <input type="text" placeholder="Enter a song title!" id="Input2"></div>
-            <!-- link style icon to recieve pointer-events -->
-            <i class="ui inverted circular search link icon" id="searchSongBtn"></i>
-          <div class="image header">
-            <div class="ui middle aligned small image">
-              <img id="SongImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
-              <div class="paragraph"></div>
-            </div>
-          </div>
         </div>
       </div>
+
+      <div class="column">
+        <div class = "container">
+        <div class="ui raised segment">
+          <div class="ui fluid placeholder">Artist:  <input type="text" placeholder="Enter an artist you like!" id="Input2">
+            <!-- link style icon to recieve pointer-events 
+            <i class="ui inverted circular search link icon" id="searchArtistBtn"></i> -->
+            <div class="image header">
+              <div class="ui middle aligned small image">
+                <img id="ArtistImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
+            </div>
+              <div class="paragraph"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <section>
+      <div class = "container" id = "resultsArea">Enter genre and artist above!</div>
+    </section>
+
       <br>
-      <div class="ui vertical animated green button" tabindex="0">
-        <div class="hidden content">Search</div>
+      
+      <div class="ui vertical animated green button" tabindex="0" id = "general_Search">
+        <div class="hidden content" id = "generalSearch">Search</div>
         <div class="visible content">
           <i class="music icon"></i>
         </div>
       </div>
+      
       <hr>
     <h2 id="Name">Music</h2>
     <footer>
@@ -102,10 +118,10 @@
         </div>
       <div class="column">
         <div class="ui raised segment">
-          <div class="ui fluid placeholder">Song: <input type="text" placeholder="Enter a song title!" id="Input2"></div>
+          <div class="ui fluid placeholder">Artist: <input type="text" placeholder="Enter an artist you like!" id="Input2"></div>
           <div class="image header">
             <div class="ui middle aligned small image">
-              <img id="SongImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
+              <img id="ArtistImage" src="https://i.ytimg.com/vi/sNPnbI1arSE/maxresdefault.jpg"></div>
               <div class="paragraph"></div>
             </div>
           </div>
@@ -127,7 +143,7 @@
           &copy; 2022 MTYE,Inc. </div>
     </footer>
 </center>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
 <!-- semantic js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 <script src="./assets/js/script.js"></script>
