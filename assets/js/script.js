@@ -43,11 +43,13 @@ let userArtistInput = document.getElementById("Input2");
 let generalSearch = document.getElementById('general_Search');
 let results = document.getElementById('resultsArea');
 
+
 //musicbrainz.com API (source https://musicbrainz.org/doc/MusicBrainz_API#Application_rate_limiting_and_identification)
 let brainzURL = 'https://musicbrainz.org/ws/2/genre/';
+///<ENTITY_TYPE>/<MBID>?inc=<INC>
 
 //lyrics.ovh API (source https://lyricsovh.docs.apiary.io/#)
-let ovhURL = 'https://api.lyrics.ovh/v1/';
+let ovhURL = 'https://api.lyrics.ovh/';
 
 //lyrics.com request URL (source https://www.lyrics.com/lyrics_api.php)
 let lyricsURL = 'https://www.stands4.com/services/v2/lyrics.php';
@@ -72,21 +74,46 @@ generalSearch.addEventListener('click', function(event) {
     else {
     console.log(genreSearchURL);
     console.log(artistSearchURL);
-
-    produceResultsGenre (search_Genre);
-    produceResultsArtist (search_Artist);
+    
+    //produceResultsGenre(search_Genre);
+    produceResultsGenre(search_Artist);
     }
 })
 
-//searchResults function
-async function produceResultsGenre(search_Genre) {
-    let searchResultGenre = await fetch()
-    fetch(genreSearchURL)
-    .then(function(){
+//searchResults function, using async function for cleaner promises results from fethc asynchronous requests
+async function produceResultsGenre(search_Artist) {
+    let searchResultArtist = await fetch(`${ovhURL}suggest/${search_Artist}`);
+    let artistData = await searchResultArtist.json();
+    console.log(searchResultArtist);
+    console.log(artistData);
 
-    })
+    //function to display the results from the search
+    displayResults(artistData);
 
+    }
+
+
+function displayResults(artistData){
+    results.innerHTML = `
+    <div class = "songResults" id = "lyrics">
+        ${artistData.data.map(songOptions =>`
+            <li>
+               <div>
+                   <p>${songOptions.artist.name} - ${songOptions.title}</p>
+               </div>
+            
+              <div>
+                <p>Lyrics</p>
+              </div>
+            </li>
+            `
+        )
+          .join()
+        }
+    </div>
+    `
 }
+
 
 //search function for genre
 //searchGenre.addEventListener("click", function (event) {
