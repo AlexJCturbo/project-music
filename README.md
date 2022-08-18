@@ -44,9 +44,11 @@ We decided to use (for css - [SEMANTIC UI](https://semantic-ui.com/) and for JS 
 
 ## ScreenShots
 
-![](screenshots/)
+![frontpage1](screenshots/ScreenShot1)
 
-![](screenshots/)
+![frontpage2](screenshots/ScreenShot2)
+
+![Modal](screenshots/ScreenShot3_Modal)
 
 ## Contributors
 
