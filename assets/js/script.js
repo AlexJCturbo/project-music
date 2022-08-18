@@ -46,7 +46,6 @@ let results = document.getElementById('resultsArea');
 
 //musicbrainz.com API (source https://musicbrainz.org/doc/MusicBrainz_API#Application_rate_limiting_and_identification)
 let brainzURL = 'https://musicbrainz.org/ws/2/genre/';
-///<ENTITY_TYPE>/<MBID>?inc=<INC>
 
 //lyrics.ovh API (source https://lyricsovh.docs.apiary.io/#)
 let ovhURL = 'https://api.lyrics.ovh/';
@@ -55,7 +54,7 @@ let ovhURL = 'https://api.lyrics.ovh/';
 let lyricsURL = 'https://www.stands4.com/services/v2/lyrics.php';
 
 
-//General search
+//General search using the user parameters
 generalSearch.addEventListener('click', function(event) {
     event.preventDefault();
     let search_Genre = userGenreInput.value.trim();
@@ -80,7 +79,7 @@ generalSearch.addEventListener('click', function(event) {
     }
 })
 
-//searchResults function, using async function for cleaner promises results from fethc asynchronous requests
+//Function used to produce results based on the artist, using async function for cleaner promises results from fetch asynchronous requests
 async function produceResultsGenre(search_Artist) {
     let searchResultArtist = await fetch(`${ovhURL}suggest/${search_Artist}`);
     let artistData = await searchResultArtist.json();
@@ -92,18 +91,18 @@ async function produceResultsGenre(search_Artist) {
 
     }
 
-
+//Function to display a list of results based on the artist
 function displayResults(artistData){
     results.innerHTML = `
     <div class = "songResults" id = "lyrics">
         ${artistData.data.map(songOptions =>`
             <li>
                <div>
-                   <p>${songOptions.artist.name} - ${songOptions.title}</p>
+                   <p id="displayed_song">${songOptions.artist.name} - ${songOptions.title}</p>
                </div>
             
               <div>
-                <p>Lyrics</p>
+                <p id="lyrics_selection" artist_selected="${songOptions.artist.name}" song_selected="${songOptions.title}">Lyrics</p>
               </div>
             </li>
             `
@@ -112,8 +111,34 @@ function displayResults(artistData){
         }
     </div>
     `
+    $('.songResults').css('list-style','none');
+    $('p#displayed_song').css('font-weight', 'bolder');
+    $('p#lyrics_selection').css('cursor', 'pointer');
 }
 
+//Function to define the lyrics that will be displayed
+results.addEventListener('click', function(selectedSong){
+    let clickedSong = selectedSong.target;
+
+    if(clickedSong.target == '#lyrics_selection'){
+        let songArtist = clickedSong.getAttribute('lyrics_selection');
+        let songName = clickedSong.getAttribute('lyrics_selection');
+
+        displayLyrics(songArtist, songName);
+    }
+})
+
+
+async function displayLyrics(songArtist, songName){
+    let lyricsResponse = fetch(`${ovhURL}/v1/${songArtist}/${songName}`);
+    let lyricsData = await lyricsResponse.jason();
+    let finalLyrics = lyricsData.finalLyrics();
+
+    results.innerHTML = `
+        <h3>${songArtist} - ${songName}</h3>
+        <p>${finalLyrics}</p>
+    `;
+}
 
 //search function for genre
 //searchGenre.addEventListener("click", function (event) {
