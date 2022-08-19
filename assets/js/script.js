@@ -1,7 +1,5 @@
 let userGenreInput = document.getElementById("Input1");
-//let searchGenre = document.getElementById("searchGenreBtn");
 let userArtistInput = document.getElementById("Input2");
-//let searchArtist = document.getElementById("searchArtistBtn");
 let generalSearch = document.getElementById('general_Search');
 let results = document.getElementById('resultsArea');
 
@@ -95,58 +93,16 @@ results.addEventListener('click', selectedSong =>{
 async function displayLyrics(songArtist, songName){
     let searchResultArtist = await fetch(`${ovhURL}/v1/${songArtist}/${songName}`);
     console.log(searchResultArtist);
-    const artistData = await searchResultArtist.jason();
+
+    const artistData = await searchResultArtist.json();
+    console.log(artistData);
     //let artistData = await searchResultArtist.json();
-    let finalLyrics = artistData.finalLyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+    let finalLyrics = artistData.lyrics.replace(/n/, '<br>');
+    //console.log(finalLyrics);
 
     results.innerHTML = `
         <h3>${songArtist} - ${songName}</h3>
         <p>${finalLyrics}</p>
     `;
 }
-
-//search function for genre
-//searchGenre.addEventListener("click", function (event) {
-	//event.preventDefault();
-    //using trim() to remove spaces on both ends
-    //let search_Genre = userGenreInput.value.trim();
-
-    //if (!search_Genre){
-        //alert("Please select your favourite music genre.");
-    //}
-    //else {
-        //let genreSearchURL = brainzURL + search_Genre;
-        //console.log(genreSearchURL);
-    //}
-//});
-
-
-//search function for artist
-/*
-searchArtist.addEventListener("click", function (event) {
-	event.preventDefault();
-    //using trim() to remove spaces on both ends
-    let search_Artist = userArtistInput.value.trim();
-
-    if (!search_Artist){
-        alert("Please enter an artist.");
-    }
-    else {
-        let artistSearchURL = ovhURL + search_Artist;
-        console.log(artistSearchURL);
-    }
-});
-*/
-    
-
-/*    
-    fetch(searchURL)
-        .then(function(spotifyArtists){
-            return spotifyArtists.json();
-        })
-        console.log(searchQuery);
-})
-
-searchArtist.addEventListener('click', function(event2){
-    event2.preventDefault;
-*/
