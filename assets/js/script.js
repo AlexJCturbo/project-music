@@ -1,3 +1,41 @@
+
+/*
+//Spotify API
+//Base URI for all Web API requests (https://developer.spotify.com/documentation/web-api/reference/#/)
+let urlSpotifySearch = 'https://api.spotify.com/v1/search?q';
+//For Artist (https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist)
+let urlArtist = 'https://api.spotify.com/v1/artists/';
+//Create a Playlist https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
+let createListSpot = 'https://api.spotify.com/v1/users/{user_id}/playlists';
+
+//Spotify authorization
+let userSpotID = 'User_ID';
+let callbackPage = 'https://alexjcturbo.github.io/project-music/callback';
+
+let state = function generateRandomString(length){
+    let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+    var charLength = chars.length;
+    var result = '';
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charLength));
+    }
+    return result;
+}
+
+localStorage.setItem(stateKey, state);
+let scope = 'user-read-private user-read-email';
+
+let loginURL = 'https://accounts.spotify.com/authorize';
+url += '?response_type=token';
+url += '&client_id=' + encodeURIComponent(userSpotID);
+url += '&scope=' + encodeURIComponent(scope);
+url += '&redirect_uri=' + encodeURIComponent(callbackPage);
+url += '&state=' + encodeURIComponent(state);
+*/
+
+//Declaring main variables
+//let homePage = 'https://alexjcturbo.github.io/project-music/';
+
 let userGenreInput = document.getElementById("Input1");
 //let searchGenre = document.getElementById("searchGenreBtn");
 let userArtistInput = document.getElementById("Input2");
@@ -45,6 +83,7 @@ generalSearch.addEventListener('click', function(event) {
 async function produceResultsGenre(search_Artist) {
     let searchResultArtist = await fetch(`${ovhURL}suggest/${search_Artist}`);
     let artistData = await searchResultArtist.json();
+
     console.log(searchResultArtist);
     console.log(artistData);
 
@@ -63,7 +102,7 @@ function displayResults(artistData){
                </div>
             
               <div>
-                <p id="lyrics_selection" artist_selected="${songOptions.artist.name}" song_selected="${songOptions.title}">Lyrics</p>
+                <span id="lyrics_selection" artist_selected="${songOptions.artist.name}" song_selected="${songOptions.title}">Lyrics</span>
               </div>
             </li>
             `
@@ -74,26 +113,29 @@ function displayResults(artistData){
     `
     $('.songResults').css('list-style','none');
     $('p#displayed_song').css('font-weight', 'bolder');
-    $('p#lyrics_selection').css('cursor', 'pointer');
+    $('span#lyrics_selection').css('cursor', 'pointer');
 }
 
 //Function to define the lyrics that will be displayed
-results.addEventListener('click', function(selectedSong){
+results.addEventListener('click', selectedSong =>{
     let clickedSong = selectedSong.target;
 
-    if(clickedSong.target == '#lyrics_selection'){
-        let songArtist = clickedSong.getAttribute('lyrics_selection');
-        let songName = clickedSong.getAttribute('lyrics_selection');
+    if(clickedSong.tagName === 'SPAN'){
+        let songArtist = clickedSong.getAttribute('artist_selected');
+        let songName = clickedSong.getAttribute('song_selected');
+
+        console.log(clickedSong);
 
         displayLyrics(songArtist, songName);
     }
 })
 
-
 async function displayLyrics(songArtist, songName){
-    let lyricsResponse = fetch(`${ovhURL}/v1/${songArtist}/${songName}`);
-    let lyricsData = await lyricsResponse.jason();
-    let finalLyrics = lyricsData.finalLyrics();
+    let response = await fetch(`${ovhURL}/v1/${songArtist}/${songName}`);
+    console.log(response);
+    const lyricsData = await response.jason();
+    //let artistData = await searchResultArtist.json();
+    let finalLyrics = lyricsData.finalLyrics.replace(/(\r\n|\r|\n)/g, '<br>');
 
     results.innerHTML = `
         <h3>${songArtist} - ${songName}</h3>
