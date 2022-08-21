@@ -26,13 +26,13 @@ This one is a project. Unlike Challenges it's a colab team work/effort on this o
 
 ## Links
 
-- [Deployed Link](https://alexjcturbo.github.io/project-music/){:target="_blank"}
+- [Deployed Link](https://alexjcturbo.github.io/project-music/){:target="_blank" rel="noopener"}
 
-- [GitHub repo Link](https://github.com/){:target="_blank"}
+- [GitHub Repository Link](https://github.com/){:target="_blank" rel="noopener"}
 
 ## Code Description
 
-We decided to use (for css - [Semantic UI](https://semantic-ui.com/){:target="_blank"} for framework "other than Bootstrap". And the APIs are ([music-story.com](https://developers.music-story.com/developers/){:target="_blank"} and [lyrics.ovh](https://lyricsovh.docs.apiary.io/#){:target="_blank"}).
+We decided to use (for css - [Semantic UI](https://semantic-ui.com/){:target="_blank" rel="noopener"} for framework "other than Bootstrap". And the APIs are ([music-story.com](https://developers.music-story.com/developers/){:target="_blank" rel="noopener"} and [lyrics.ovh](https://lyricsovh.docs.apiary.io/#){:target="_blank" rel="noopener"}).
 
 - CSS→
 
@@ -63,17 +63,6 @@ We decided to use (for css - [Semantic UI](https://semantic-ui.com/){:target="_b
 
 ![Search-result-2_lyrics](screenshots/ScreenShot_SearchResult2.png)
 
-## Contributors
-
-- [Alex Jaimes](https://github.com/AlexJCturbo)
-
-- [Sam Rankin](https://github.com/Rankin47)
-
-- [A-N26](https://github.com/A-N26)
-
-- [Damon Paoletti](https://github.com/damonpaoletti)
-
-
 ## Badges
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -94,10 +83,10 @@ We decided to use (for css - [Semantic UI](https://semantic-ui.com/){:target="_b
 
 ## Credits
 
-- [A-N26](https://github.com/A-N26)
+- [A-N26](https://github.com/A-N26){:target="\_blank"}
 
-- [Alex Jaimes](https://github.com/AlexJCturbo)
+- [Alex Jaimes](https://github.com/AlexJCturbo){:target="\_blank"}
 
-- [Sam Rankin](https://github.com/Rankin47)
+- [Sam Rankin](https://github.com/Rankin47){:target="\_blank"}
 
-- [Damon Paoletti](https://github.com/damonpaoletti)
+- [Damon Paoletti](https://github.com/damonpaoletti){:target="\_blank"}
