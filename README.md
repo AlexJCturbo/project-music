@@ -53,20 +53,21 @@ We decided to use [Semantic UI](https://semantic-ui.com/) for the css framework 
     - We had initially implmented a "background ambient music" to play when a play button was clicked and during Demo it played properly and as intended. but later on it simply wouldnt work no matter what we did (made sure the images,media linkings were proper along with the script and later on changed script to try a diff approach)...
     - Colaboration was constantly hindered by time clashes either due to job timings or other reason's for unavailability. But we still made it happen despite the time constraints other than the presentation deadline.
 
-## ScreenShots
+## Screen Shots
 
+Desktop-size
 ![Desktop-size](screenshots/ScreenShot_fullsize.png)
 
 
-
+Mobile-responsive-size
 ![Mobile-responsive-size](screenshots/ScreenShot_MobileResponsiveSize.png)
 
 
-
+Search-result-1_genre&band/singer
 ![Search-result-1_genre&band/singer](screenshots/ScreenShot_SearchResult1.png)
 
 
-
+Search-result-2_lyrics
 ![Search-result-2_lyrics](screenshots/ScreenShot_SearchResult2.png)
 
 ## Badges
