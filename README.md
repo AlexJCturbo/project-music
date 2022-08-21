@@ -55,20 +55,21 @@ We decided to use [Semantic UI](https://semantic-ui.com/) for the css framework 
 
 ## Screen Shots
 
-Desktop-size
+### Desktop-size
 ![Desktop-size](screenshots/ScreenShot_fullsize.png)
 
 
-Mobile-responsive-size
+### Mobile-responsive-size
 ![Mobile-responsive-size](screenshots/ScreenShot_MobileResponsiveSize.png)
 
 
-Search-result-1_genre&band/singer
+### Search-result-1_genre&band/singer
 ![Search-result-1_genre&band/singer](screenshots/ScreenShot_SearchResult1.png)
 
 
-Search-result-2_lyrics
+### Search-result-2_lyrics
 ![Search-result-2_lyrics](screenshots/ScreenShot_SearchResult2.png)
+
 
 ## Badges
 
