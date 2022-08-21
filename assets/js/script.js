@@ -3,9 +3,11 @@ let userArtistInput = document.getElementById("Input2");
 let generalSearch = document.getElementById("general_Search");
 let results = document.getElementById("resultsArea");
 
+//deezer developer (source https://developers.deezer.com/api)
+let deezerURL = "https://api.deezer.com/version/service/id/method/?parameters";
+
 //music story developer (source https://developers.music-story.com/developers/genre)
 let musicStoryURL = "https://api.music-story.com/en/genre/";
-
 
 //lyrics.ovh API (source https://lyricsovh.docs.apiary.io/#)
 let ovhURL = "https://api.lyrics.ovh/";
@@ -38,58 +40,26 @@ generalSearch.addEventListener('click', function(event) {
     console.log(genreSearchURL);
     console.log(artistSearchURL);
     
-    produceResultsGenre(search_Genre);
+    //produceResultsGenre(search_Genre);
     produceResultsArtist(search_Artist);
     }
 })
 
-//Function used to produce results based on the genre, using async function
-async function produceResultsGenre(search_Genre) {
-    let searchResultGenre = await fetch(`${musicStoryURL}search?name=${search_Genre}`);
-    let genreData = await searchResultGenre.json();
 
-    console.log(searchResultGenre);
-    console.log(genreData);
+let settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://deezerdevs-deezer.p.rapidapi.com/genre/%7Bid%7D",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "519bf05db6msh225935cdaf63e77p13fc9cjsn93828790b1e2",
+		"X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+	}
+};
 
-    displayResults(artistGenre);
-    }
-
-//Function to display a list of the search results based on the artist
-function displayResults(genreData) {
-    results.innerHTML = `
-        <div class = "songResults" id = "lyricsResults">
-            ${genreData.data.map(genreOptions =>
-            `<li>
-                <div>
-                    <br>
-                    <p id="displayed_song">${genreOptions.artist.name} - ${genreOptions.title}</p>
-                </div>
-
-                <div>
-                    <span id="lyrics_selection" artist_selected="${songOptions.artist.name}" song_selected="${songOptions.title}">Lyrics</span>
-                </div>
-            </li>
-            `
-            )
-            .join('')
-            }
-        </div>`;
-        
-//    $('.songResults').css('list-style','none');
-//    $('p#displayed_song').css('font-weight', 'bolder');
-//    $('p#displayed_song').css('padding', '3px');
-//    $('span#lyrics_selection').css('cursor', 'pointer');
-//    $('span#lyrics_selection').css('color', 'white');
-//    $('span').css('padding', '3px');
-//    $('span').css('background', '#3a86a7aa');
-//    $('span').css('border-radius', '4px');
-}
-
-
-
-
-
-
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
 
 //Function used to produce results based on the artist, using async function for cleaner promises results from fetch asynchronous requests
 async function produceResultsArtist(search_Artist) {
@@ -164,3 +134,41 @@ async function displayLyrics(songArtist, songName){
         <p>${finalLyrics}</p>
     `;
 }
+
+// background ambient music
+var mysong = document.getElementById("mysong");
+var icon = document.getElementById("icon");
+
+icon.onclick = function() {
+  if (mysong.paused) {
+    mysong.play();
+    icon.src = "./assets/images/pause.png";
+  }
+  else {
+    mysong.pause();
+    icon.src = "./assets/images/play.png";
+  }
+}
+
+// modal function
+var modal = document.createElement("modal-content");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "fixed";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+modal.style.top = "0";
+modal.style.left = "0";
+modal.style.width = "100%";
+modal.style.height = "100%";
+modal.style.backgroundColor = "rgba(0,0,0,0.5)";
+modal.style.zIndex = "100";
+modal.innerHTML =
+  '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: grey; padding: 20px;"><h1>How the site works</h1><p>Combine your favourite genre with a lyric of your choice and we will recommend a song!</p></div>';
+document.body.appendChild(modal);
+modal.addEventListener("click", function() {
+  document.body.removeChild(modal);
+})
