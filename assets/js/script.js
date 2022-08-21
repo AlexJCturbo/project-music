@@ -45,7 +45,6 @@ generalSearch.addEventListener('click', function(event) {
     }
 })
 
-
 let settings = {
 	"async": true,
 	"crossDomain": true,
