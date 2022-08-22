@@ -45,20 +45,85 @@ generalSearch.addEventListener('click', function(event) {
     }
 })
 
-let settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://deezerdevs-deezer.p.rapidapi.com/genre/%7Bid%7D",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Key": "519bf05db6msh225935cdaf63e77p13fc9cjsn93828790b1e2",
-		"X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-	}
-};
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+
+/*
+//Function used to produce results based on the genre, using async function
+async function produceResultsGenre(search_Genre) {
+    let searchResultGenre = await fetch(`${musicStoryURL}search?name=${search_Genre}`);
+    let genreData = await searchResultGenre.json();
+
+    console.log(searchResultGenre);
+    console.log(genreData);
+
+    displayResults(artistGenre);
+    }
+
+//Function to display a list of the search results based on the artist
+function displayResults(genreData) {
+    results.innerHTML = `
+        <div class = "songResults" id = "lyricsResults">
+            ${genreData.data.map(genreOptions =>
+            `<li>
+                <div>
+                    <br>
+                    <p id="displayed_song">${genreOptions.artist.name} - ${genreOptions.title}</p>
+                </div>
+
+                <div>
+                    <span id="lyrics_selection" artist_selected="${songOptions.artist.name}" song_selected="${songOptions.title}">Lyrics</span>
+                </div>
+            </li>
+            `
+            )
+            .join('')
+            }
+        </div>`;
+        
+//    $('.songResults').css('list-style','none');
+//    $('p#displayed_song').css('font-weight', 'bolder');
+//    $('p#displayed_song').css('padding', '3px');
+//    $('span#lyrics_selection').css('cursor', 'pointer');
+//    $('span#lyrics_selection').css('color', 'white');
+//    $('span').css('padding', '3px');
+//    $('span').css('background', '#3a86a7aa');
+//    $('span').css('border-radius', '4px');
+}
+
+//Function to get the selected song from the API
+results.addEventListener('click', selectedSong => {
+    let clickedSong = selectedSong.target;
+
+    if(clickedSong.tagName == 'SPAN'){
+        let songArtist = clickedSong.getAttribute('artist_selected');
+        let songName = clickedSong.getAttribute('song_selected');
+
+        console.log(clickedSong);
+
+        displayLyrics(songArtist, songName);
+    }
+}) 
+
+//Function to display the lyrics of the selected song
+async function displayLyrics(songArtist, songName){
+    let lyricsSelected = await fetch(`${ovhURL}v1/${songArtist}/${songName}`);
+    //console.log(lyricsSelected);
+
+    const artistData = await lyricsSelected.json();
+    console.log(artistData);
+    //let artistData = await lyricsSelected.json();
+
+    let finalLyrics = artistData.lyrics.replace(/(\r|\n|\r\n)/g, '<br>');
+    //console.log(finalLyrics);
+
+    results.innerHTML = `
+        <h3>${songArtist} - ${songName}</h3>
+        <p>${finalLyrics}</p>
+    `;
+}
+*/
+
+
 
 //Function used to produce results based on the artist, using async function for cleaner promises results from fetch asynchronous requests
 async function produceResultsArtist(search_Artist) {
