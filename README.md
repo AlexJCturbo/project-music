@@ -6,7 +6,7 @@
 
 2. [Links](#Links)
 
-3. [Code Description](#Code%20Description)
+3. [Code Description](#Code-Description)
 
 4. [Challenges](#Challenges)
 
