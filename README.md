@@ -10,13 +10,11 @@
 
 4. [Challenges](#Challenges)
 
-5. [ScreenShots](#ScreenShots)
+5. [ScreenShots](#Screen-Shots)
 
-6. [Contributors](#Contributors)
+6. [Badges](#Badges)
 
-7. [Badges](#Badges)
-
-8. [Credits](#Credits)
+7. [Credits](#Credits)
 
 ## Description
 
