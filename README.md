@@ -10,7 +10,7 @@
 
 4. [Challenges](#Challenges)
 
-5. [ScreenShots](#Screen-Shots)
+5. [Screen Shots](#Screen-Shots)
 
 6. [Badges](#Badges)
 
